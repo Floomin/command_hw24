@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Footbal Championship</title>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="wrapper__video-background">
+        <video class="wrapper__video" autoplay muted loop id="bg-video">
+            <source src="src/media/bg_video.mp4" type="video/mp4">Your browser does not support the video tag.
+        </video>
+        </div>
+        <div class="wrapper__slider-container">
+            <div class="wrapper__slider" id="slider"></div>
+        </div>
+        <button class="button" id="start">
+            <a href="group.html" class="wrapper__link"> Начать турнир </a>
+        </button>
+    </div>
+    <script src="src/js/start_page.js"></script>
+    <script src="src/js/countries.js"></script>
 </body>
 </html>
