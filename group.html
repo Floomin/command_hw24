@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Championship</title>
+    <link rel="stylesheet" href="src/scss/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__leaders leaders"></div>
+      <div class="page__controls controls">
+        <button class="button-group" id="play-match">Сыграть матч</button>
+        <button class="button-group" id="next-stage" disabled>
+          <a href="playoff.html">Перейти к следующему этапу</a>
+        </button>
+      </div>
+      <div class="page__groups groups"></div>
+      <div class="page__matches matches"></div>
+      <script src="src/js/countries.js"></script>
+      <script src="src/js/group.js"></script>
+    </div>
+  </body>
+</html>
