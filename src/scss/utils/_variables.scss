@@ -1,0 +1,39 @@
+// Цвета
+$primary-color: #3d3d3d7a;
+$hover-color: #6e6e6e7a;
+$active-color: #3d3d3d7a;
+$border-color: #ffffffb5;
+$text-color: aliceblue;
+
+$color-bg: #333333;
+$color-bg-dark: #353535;
+$color-bg-light: #575757;
+$color-bg-button: #696969;
+$color-text: white;
+$color-border: #ccc;
+
+// Шрифты и размеры
+$font-size-large: 24px;
+
+// Тени и фильтры
+$box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
+  rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+$backdrop-filter: blur(5.2px);
+
+// Переменные
+$font-family-primary: "Lilita One", sans-serif;
+$background-color: #333;
+$primary-color: #696969;
+$text-color: aliceblue;
+$button-bg-color: #2a3036;
+$button-hover-bg-color: #3d454d;
+$button-active-bg-color: #262b30;
+$button-disabled-bg-color: #6c757d;
+$box-shadow-primary: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+  rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+  rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+  rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+  rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px,
+  rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;

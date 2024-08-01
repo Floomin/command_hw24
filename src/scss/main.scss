@@ -1,0 +1,7 @@
+@import "utils/variables";
+@import "utils/mixins";
+@import "base/base"; // Импортируем глобальные стили
+@import "components/button"; // Импортируем стили для кнопок
+@import "pages/start_page";
+@import "pages/group_stage";
+@import "pages/playoff_stage";
