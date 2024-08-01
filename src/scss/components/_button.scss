@@ -1,0 +1,71 @@
+.button {
+    width: 30%;
+    padding: 15px;
+    font-size: $font-size-large;
+    position: absolute;
+    bottom: 20%;
+    left: 35%;
+    background: $primary-color;
+    border-radius: 16px;
+    box-shadow: $box-shadow;
+    backdrop-filter: $backdrop-filter;
+    -webkit-backdrop-filter: $backdrop-filter;
+    border: 1px solid $border-color;
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover {
+            background-color: $hover-color;
+            @include transition(background-color, 0.3s);
+          }
+        
+          &:active {
+            background-color: $active-color;
+            @include transition(background-color, 0.2s);
+          }
+    }
+}
+
+.button-group {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: $color-bg-button;
+    border: none;
+    border-radius: 5px;
+    color: $text-color;
+    cursor: pointer;
+    @include box-shadow(rgb(48, 48, 48) 0px 20px 30px -10px);
+
+    &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    
+        &:hover {
+          background-color: #aaaaaa;
+          transition: 0.2s;
+        }
+    }
+
+    &:hover {
+        @include box-shadow(
+          rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset
+        );
+        background-color: #99928b;
+        transition: 0.2s;
+      }
+    
+      &:active {
+        background-color: #6d6d6d;
+        transition: 0.2s;
+      }
+    
+      a {
+        text-decoration: none;
+        color: $color-text;
+      }
+}

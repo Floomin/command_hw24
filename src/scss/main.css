@@ -7,6 +7,67 @@ body html {
   font-family: "Lilita One", sans-serif;
 }
 
+.button {
+  width: 30%;
+  padding: 15px;
+  font-size: 24px;
+  position: absolute;
+  bottom: 20%;
+  left: 35%;
+  background: #696969;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+  border: 1px solid rgba(255, 255, 255, 0.7098039216);
+}
+.button a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.button a:hover {
+  background-color: rgba(110, 110, 110, 0.4784313725);
+  transition: background-color 0.3s;
+}
+.button a:active {
+  background-color: rgba(61, 61, 61, 0.4784313725);
+  transition: background-color 0.2s;
+}
+
+.button-group {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #696969;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  box-shadow: rgb(48, 48, 48) 0px 20px 30px -10px;
+}
+.button-group:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.button-group:disabled:hover {
+  background-color: #aaaaaa;
+  transition: 0.2s;
+}
+.button-group:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: #99928b;
+  transition: 0.2s;
+}
+.button-group:active {
+  background-color: #6d6d6d;
+  transition: 0.2s;
+}
+.button-group a {
+  text-decoration: none;
+  color: white;
+}
+
 .wrapper {
   overflow: hidden;
   width: 100%;
