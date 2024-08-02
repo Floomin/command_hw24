@@ -25,11 +25,11 @@ body html {
   text-decoration: none;
   color: aliceblue;
 }
-.button a:hover {
+.button:hover {
   background-color: rgba(110, 110, 110, 0.4784313725);
   transition: background-color 0.3s;
 }
-.button a:active {
+.button:active {
   background-color: rgba(61, 61, 61, 0.4784313725);
   transition: background-color 0.2s;
 }
@@ -83,7 +83,7 @@ body html {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
 }
 .wrapper__video-background .video {
   width: 100%;
@@ -139,4 +139,109 @@ body html {
 }
 .wrapper__slider-container .wrapper__slider .slider-item img:hover {
   box-shadow: rgba(255, 255, 255, 0.507) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.562) 0px 18px 36px -18px inset;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../media/bg_stadion.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
+.page__leaders {
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #353535;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.page__leaders .team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.page__leaders .team img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.page__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+.page__groups {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.page__groups .group {
+  min-width: 22%;
+  background-color: #575757;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgb(24, 24, 24) 0px 20px 30px -10px;
+}
+.page__groups .group h2 {
+  text-align: center;
+  border-bottom: 2px solid #a8a8a8;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.page__groups .group .team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.page__groups .group .team img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.page__matches {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.page__matches .match {
+  width: 45%;
+  min-width: 380px;
+  background-color: #363636;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, rgb(43, 43, 43) 0px 20px 30px -10px;
+}
+.page__matches .match .team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: 51px;
+}
+.page__matches .match .team img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 8%;
+}
+.page__matches .match .team .item {
+  margin: 0 5%;
 }/*# sourceMappingURL=main.css.map */

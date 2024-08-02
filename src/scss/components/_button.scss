@@ -16,16 +16,17 @@
         text-decoration: none;
         color: $text-color;
 
-        &:hover {
-            background-color: $hover-color;
-            @include transition(background-color, 0.3s);
-          }
-        
-          &:active {
-            background-color: $active-color;
-            @include transition(background-color, 0.2s);
-          }
     }
+    
+    &:hover {
+        background-color: $hover-color;
+        @include transition(background-color, 0.3s);
+      }
+    
+      &:active {
+        background-color: $active-color;
+        @include transition(background-color, 0.2s);
+      }
 }
 
 .button-group {

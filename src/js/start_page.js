@@ -10,7 +10,7 @@ for (let i = 0; i < totalItems; i++) {
 }
 
 function updateSlider() {
-    const items = document.querySelectorAll('slider-item');
+    const items = document.querySelectorAll('.slider-item');
     items.forEach((item, index) => {
         const offset = Math.abs(centerIndex - index);
         const scale = 1 - offset * 0.2;
@@ -24,7 +24,7 @@ updateSlider();
 
 function slide() {
     countries.push(countries.shift());
-    const items = document.querySelector('slider-item');
+    const items = document.querySelectorAll('.slider-item');
     for (let i = 0; i < totalItems; i++) {
         items[i].innerHTML = countries[i].flag;
     }
