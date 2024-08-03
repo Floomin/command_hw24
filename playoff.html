@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playoff Stage</title>
+    <link rel="stylesheet" href="src/scss/main.css">
+</head>
+<body>
+    <div class="playoff__container">
+        <div class="playoff__bracket">
+            <div class="playoff__round playoff__round--16 playoff__round--left">
+                <h2>1/8 Финала</h2>
+                <div class="playoff__groups"></div>
+            </div>
+            <div class="playoff__round playoff__round--quarter-final playoff__round--left">
+                <h2>1/4 Финала</h2>
+                <div class="playoff__groups"></div>
+            </div>
+            <div class="playoff__round playoff__round--semi-final-final">
+                <div class="playoff__final">
+                    <h2>Финал</h2>
+                    <div class="playoff__group"></div>
+                </div>
+                <div class="playoff__semi-final">
+                    <h2>1/2 Финала</h2>
+                    <div class="playoff__groups"></div>
+                </div>
+            </div>
+            <div class="playoff__round playoff__round--quarter-final playoff__round--right">
+                <h2>1/4 Финала</h2>
+                <div class="playoff__groups"></div>
+            </div>
+            <div class="playoff__round playoff__round--16 playoff__round--right">
+                <h2>1/8 Финала</h2>
+                <div class="playoff__groups"></div>
+            </div>
+        </div>
+        <div class="playoff__controls">
+            <button id="play-next-match">Играть следующий матч</button>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal__content">
+                <span class="modal__close-button">&times;</span>
+                <p id="winner-announcement"></p>
+                <button id="start-new-tournament">
+                    Начать новый турнир
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="src/js/playoff.js"></script>
+</body>
+</html>
