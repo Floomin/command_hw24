@@ -1,5 +1,5 @@
 // // // playoff_script.js
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     let countMatches = 1;
     let side = 1;
     let currentMatchIndex = 0;
@@ -12,69 +12,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function generateMockLeaders() {
         return [{
-            flag: '🇳🇱',
-            name: 'Нидерланды'
-        },
-        {
-            flag: '🇺🇸',
-            name: 'США'
-        },
-        {
-            flag: '🇦🇷',
-            name: 'Аргентина'
-        },
-        {
-            flag: '🇦🇺',
-            name: 'Австралия'
-        },
-        {
-            flag: '🇯🇵',
-            name: 'Япония'
-        },
-        {
-            flag: '🇭🇷',
-            name: 'Хорватия'
-        },
-        {
-            flag: '🇧🇷',
-            name: 'Бразилия'
-        },
-        {
-            flag: '🇰🇷',
-            name: 'Корея'
-        },
-        {
-            flag: '🇬🇧',
-            name: 'Англия'
-        },
-        {
-            flag: '🇸🇳',
-            name: 'Сенегал'
-        },
-        {
-            flag: '🇫🇷',
-            name: 'Франция'
-        },
-        {
-            flag: '🇵🇱',
-            name: 'Польша'
-        },
-        {
-            flag: '🇲🇦',
-            name: 'Марокко'
-        },
-        {
-            flag: '🇪🇸',
-            name: 'Испания'
-        },
-        {
-            flag: '🇵🇹',
-            name: 'Португалия'
-        },
-        {
-            flag: '🇨🇭',
-            name: 'Швейцария'
-        },
+                flag: '🇳🇱',
+                name: 'Нидерланды'
+            },
+            {
+                flag: '🇺🇸',
+                name: 'США'
+            },
+            {
+                flag: '🇦🇷',
+                name: 'Аргентина'
+            },
+            {
+                flag: '🇦🇺',
+                name: 'Австралия'
+            },
+            {
+                flag: '🇯🇵',
+                name: 'Япония'
+            },
+            {
+                flag: '🇭🇷',
+                name: 'Хорватия'
+            },
+            {
+                flag: '🇧🇷',
+                name: 'Бразилия'
+            },
+            {
+                flag: '🇰🇷',
+                name: 'Корея'
+            },
+            {
+                flag: '🇬🇧',
+                name: 'Англия'
+            },
+            {
+                flag: '🇸🇳',
+                name: 'Сенегал'
+            },
+            {
+                flag: '🇫🇷',
+                name: 'Франция'
+            },
+            {
+                flag: '🇵🇱',
+                name: 'Польша'
+            },
+            {
+                flag: '🇲🇦',
+                name: 'Марокко'
+            },
+            {
+                flag: '🇪🇸',
+                name: 'Испания'
+            },
+            {
+                flag: '🇵🇹',
+                name: 'Португалия'
+            },
+            {
+                flag: '🇨🇭',
+                name: 'Швейцария'
+            },
         ];
     }
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const matchElement = document.createElement('div');
         matchElement.className = 'match';
         matchElement.innerHTML = `
-        <div class="team">
+      <div class="team">
         ${team1.flag}
         <p>${team1.name}</p>
         <p>${team1.goals || ''}</p>
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${team2.name}</p>
         <p>${team2.goals || ''}</p>
       </div>
-      `;
+    `;
         return matchElement;
     }
 
@@ -130,15 +130,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function playNextMatch() {
+
         if (currentStage >= stages.length) return;
 
         if (currentStage != 3) {
+
             const leftContainer = matchesContainer[currentStage];
             const rightContainer = matchesContainer[matchesContainer.length - (currentStage + 1)];
 
             const roundMatches = [
-                ...leftContainer.querySelectorAll('.groud .match'),
-                ...rightContainer.querySelectorAll('.groud .match')
+                ...leftContainer.querySelectorAll('.group .match'),
+                ...rightContainer.querySelectorAll('.group .match')
             ];
 
             const matchElement = roundMatches[currentMatchIndex];
@@ -152,22 +154,25 @@ document.addEventListener('DOMContentLoaded', function () {
             const matchResult = simulateMatch(team1, team2);
 
             matchElement.innerHTML = `
-            <div class="team${matchResult.team1.name === matchResult.winner.name ? 'winner' : ''}">
-            ${matchResult.team1.flag}
-            <p>${matchResult.team1.name}</p>
-            <p>${matchResult.team1.goals}</p>
-            </div>
-            <div class="team${matchResult.team2.name === matchResult.winner.name ? 'winner' : ''}">
-            ${matchResult.team2.flag}
-            <p>${matchResult.team2.name}</p>
-            <p>${matchResult.team2.goals}</p>
-            </div> 
-            `;
+    <div class="team ${matchResult.team1.name === matchResult.winner.name ? 'winner' : ''}">
+      ${matchResult.team1.flag}
+      <p>${matchResult.team1.name}</p>
+      <p>${matchResult.team1.goals}</p>
+    </div>
+    <div class="team ${matchResult.team2.name === matchResult.winner.name ? 'winner' : ''}">
+      ${matchResult.team2.flag}
+      <p>${matchResult.team2.name}</p>
+      <p>${matchResult.team2.goals}</p>
+    </div>
+  `;
 
             if (!nextStageLeaders[currentStage]) {
                 nextStageLeaders[currentStage] = [];
                 nextStageLeadersFull[currentStage] = [];
             }
+
+            nextStageLeadersFull[currentStage].push(matchResult.winner);
+            nextStageLeaders[currentStage].push(matchResult.winner);
 
             if (countMatches === 2) {
                 const nextStageLeftContainer = matchesContainer[currentStage + 1];
@@ -184,12 +189,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (side <= 2) {
                         nextStageLeftContainer.appendChild(groupElement);
                         side++;
-                    }
-                    else {
+                    } else {
                         nextStageRightContainer.appendChild(groupElement);
-                        side = 1;
                     }
-
                     if (side === 4) {
                         side = 1;
                     }
@@ -221,32 +223,28 @@ document.addEventListener('DOMContentLoaded', function () {
             const matchResult = simulateMatch(team1, team2);
 
             matchElement.innerHTML = `
-            <div class="team${matchResult.team1.name === matchResult.winner.name ? 'winner' : ''}">
-            ${matchResult.team1.flag}
-            <p>${matchResult.team1.name}</p>
-            <p>${matchResult.team1.goals}</p>
-            </div>
-            <div class="team${matchResult.team2.name === matchResult.winner.name ? 'winner' : ''}">
-            ${matchResult.team2.flag}
-            <p>${matchResult.team2.name}</p>
-            <p>${matchResult.team2.goals}</p>
-            </div>
-            `;
-
+    <div class="team ${matchResult.team1.name === matchResult.winner.name ? 'winner' : ''}">
+      ${matchResult.team1.flag}
+      <p>${matchResult.team1.name}</p>
+      <p>${matchResult.team1.goals}</p>
+    </div>
+    <div class="team ${matchResult.team2.name === matchResult.winner.name ? 'winner' : ''}">
+      ${matchResult.team2.flag}
+      <p>${matchResult.team2.name}</p>
+      <p>${matchResult.team2.goals}</p>
+    </div>
+  `;
             announceWinner(matchResult.winner);
         }
     }
 
     function simulateMatch(team1, team2) {
         let team1Goals, team2Goals;
-
         do {
             team1Goals = Math.floor(Math.random() * 5);
             team2Goals = Math.floor(Math.random() * 5);
         } while (team1Goals === team2Goals);
-
         const winner = team1Goals > team2Goals ? team1 : team2;
-
         return {
             team1: {
                 ...team1,
@@ -273,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'index.html';
     });
 
-    document.querySelector('modal__close-button').addEventListener('click', () => {
+    document.querySelector('.modal__close-button').addEventListener('click', () => {
         document.getElementById('modal').style.display = 'none';
     });
 

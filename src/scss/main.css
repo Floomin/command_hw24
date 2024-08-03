@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body,
 html {
   margin: 0;
@@ -98,9 +97,9 @@ html {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Масштабирование видео */
+     object-fit: cover;
   -o-object-position: center;
-     object-position: center; /* Центрирование видео */
+     object-position: center;
 }
 .wrapper__slider-container {
   position: absolute;
@@ -245,4 +244,227 @@ html {
 }
 .page__matches .match .team .item {
   margin: 0 5%;
+}
+
+.playoff__container {
+  font-family: "Lilita One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: url(../media/bg_stadion.png);
+  background-color: #333;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.playoff__bracket {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.playoff__bracket .playoff__round {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+.playoff__bracket .playoff__round h2 {
+  background-color: #696969;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 40px 0;
+  text-align: center;
+  box-shadow: rgba(12, 12, 12, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgb(24, 24, 24) 0px 20px 30px -10px;
+}
+.playoff__bracket .playoff__round .playoff__groups {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.playoff__bracket .playoff__round .playoff__groups .group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.playoff__bracket .playoff__round .playoff__groups .group .match {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #696969;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+  color: aliceblue;
+  box-shadow: rgba(12, 12, 12, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgb(24, 24, 24) 0px 20px 30px -10px;
+}
+.playoff__bracket .playoff__round .playoff__groups .group .match .team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.playoff__bracket .playoff__round .playoff__groups .group .match .team p {
+  text-align: center;
+  font-weight: bold;
+}
+.playoff__bracket .playoff__round .playoff__groups .group .match .team img {
+  width: 48px;
+  height: 48px;
+}
+.playoff__bracket .playoff__round .playoff__semi-final {
+  margin-bottom: 0;
+}
+.playoff__bracket .playoff__round .playoff__final {
+  padding: 5px;
+  margin: 0;
+}
+.playoff__bracket .playoff__round .playoff__final .match {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #696969;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+  color: aliceblue;
+  box-shadow: rgba(12, 12, 12, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgb(24, 24, 24) 0px 20px 30px -10px;
+}
+.playoff__bracket .playoff__round .playoff__final .match .team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.playoff__bracket .playoff__round .playoff__final .match .team img {
+  width: 48px;
+  height: 48px;
+}
+.playoff__bracket .playoff__round .playoff__final .match .team p {
+  text-align: center;
+  font-weight: bold;
+}
+.playoff__bracket .playoff__round--quarter-final {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.playoff__bracket .playoff__round--quarter-final .playoff__groups {
+  gap: 40px;
+}
+.playoff__bracket .playoff__round--quarter-final .playoff__groups h2 {
+  justify-self: flex-start;
+}
+.playoff__bracket .playoff__round--quarter-final .playoff__groups .group {
+  margin-bottom: 100px;
+}
+.playoff__bracket .playoff__round--quarter-final .playoff__groups .group .match {
+  margin-top: 20px;
+}
+
+.playoff__controls {
+  margin: 20px;
+}
+.playoff__controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2a3036;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(12, 12, 12, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgb(24, 24, 24) 0px 20px 30px -10px;
+}
+.playoff__controls button:hover {
+  background-color: #3d454d;
+}
+.playoff__controls button:active {
+  background-color: #262b30;
+}
+.playoff__controls button:disabled {
+  background-color: #6c757d;
+}
+
+.winner {
+  font-weight: bold;
+  background-color: #705c00;
+  padding-inline: 10px;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+.modal__content {
+  background-color: #333333;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.7098039216);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+  text-align: center;
+}
+.modal__content .modal__close-button {
+  color: aliceblue;
+  padding: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#winner-announcement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+#winner-announcement span {
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#start-new-tournament {
+  width: 100%;
+  margin-top: 40px;
+  padding: 10px 35px;
+  font-size: 24px;
+  background-color: #3d454d;
+  color: aliceblue;
+  border: 2px solid #2a3036;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#start-new-tournament:hover, #start-new-tournament:active {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+#start-new-tournament:hover {
+  background-color: #3d454d;
+}
+#start-new-tournament:active {
+  background-color: #262b30;
 }/*# sourceMappingURL=main.css.map */

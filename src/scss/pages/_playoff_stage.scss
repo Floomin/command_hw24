@@ -6,7 +6,7 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: url(../../media/bg_stadion.png);
+  background: url(../media/bg_stadion.png);
   background-color: $background-color;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -21,8 +21,8 @@
   .playoff__round {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     width: 15%;
 
     h2 {
@@ -49,7 +49,7 @@
         flex-direction: column;
         gap: 10px;
 
-        .matche {
+        .match {
           display: flex;
           flex-direction: column;
           align-items: center;
