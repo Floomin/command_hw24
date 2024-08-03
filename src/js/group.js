@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ${matchResult.team2.flag}
               </div>
               `;
-              matchesContainer.appendChild(matchElement);
+                matchesContainer.appendChild(matchElement);
             });
 
 
@@ -139,17 +139,17 @@ document.addEventListener("DOMContentLoaded", function () {
             groupElement.className = 'group';
             groupElement.innerHTML = `<h2>Группа ${groupNames[index]}</h2>`;
             group.forEach(team => {
-              const teamElement = document.createElement('div');
-              teamElement.className = 'team';
-              teamElement.innerHTML = `
+                const teamElement = document.createElement('div');
+                teamElement.className = 'team';
+                teamElement.innerHTML = `
                 ${team.flag}
                 <span>${team.name}</span>
                 <span>${team.points}</span>
               `;
-            groupElement.appendChild(teamElement);
+                groupElement.appendChild(teamElement);
+            });
+            groupContainer.appendChild(groupElement);
         });
-        groupContainer.appendChild(groupElement);
-    });
     }
 
     function simulateMatch(team1, team2) {
@@ -157,8 +157,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const team2Goals = Math.floor(Math.random() * 6);
         team1.points += team1Goals > team2Goals ? 3 : team1Goals === team2Goals ? 1 : 0;
         team2.points += team2Goals > team1Goals ? 3 : team1Goals === team2Goals ? 1 : 0;
-        return { team1: { ...team1, goals: team1Goals }, team2: { ...team2, goals: team2Goals} };
+        return { team1: { ...team1, goals: team1Goals }, team2: { ...team2, goals: team2Goals } };
     }
 
-    document.getElementById('play-match').addEventListener('click', playMatch, updateLeaders());
+    document.getElementById('play-match').addEventListener('click', () => {
+        playMatch();
+        updateLeaders();
+        updateStyle();
+    });
+
+    function updateStyle() {
+        const pageElement = document.getElementById('page_style');
+        pageElement.style.height = '100%';
+        pageElement.style.backgroundSize = 'contain';
+    }
 });
