@@ -1,22 +1,22 @@
 .page {
-    width: 100%;
-    height: 100%;
-    background-image: url(../media/bg_stadion.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: $color-bg;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../media/bg_stadion.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: $color-bg;
 
-    color: $color-text;
-    text-align: center;
+  color: $color-text;
+  text-align: center;
 
-    &__leaders {
-        height: 10%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: $color-bg-dark;
-        padding: 10px;
-        @include box-shadow(
+  &__leaders {
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color-bg-dark;
+    padding: 10px;
+    @include box-shadow(
       rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px,
       rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -25,115 +25,115 @@
     );
 
     .team {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+  }
+
+  &__groups {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    .group {
+      min-width: 22%;
+      background-color: $color-bg-light;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid $color-border;
+      border-radius: 10px;
+      @include box-shadow(
+        rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset,
+        rgb(24, 24, 24) 0px 20px 30px -10px
+      );
+
+      h2 {
+        text-align: center;
+        border-bottom: 2px solid #a8a8a8;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      .team {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 5px 0;
 
         img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
         }
       }
     }
+  }
 
-    &__controls {
+  &__matches {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    .match {
+      width: 45%;
+      min-width: 380px;
+      background-color: #363636;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid $color-border;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include box-shadow(
+        rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px,
+        rgb(43, 43, 43) 0px 20px 30px -10px
+      );
+
+      .team {
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin: 20px 0;
-        gap: 10px;
-    }
+        justify-content: space-between;
+        width: 50%;
+        height: 51px;
 
-    &__groups {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        padding: 20px;
-
-        .group {
-            min-width: 22%;
-            background-color: $color-bg-light;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid $color-border;
-            border-radius: 10px;
-            @include box-shadow(
-            rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-            rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset,
-            rgb(24, 24, 24) 0px 20px 30px -10px
-            );
-
-            h2 {
-                text-align: center;
-                border-bottom: 2px solid #a8a8a8;
-                padding-bottom: 10px;
-                margin-bottom: 10px;
-            }
-
-            .team {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 5px 0;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    margin-right: 10px;
-                }
-            }
+        img {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: 0 8%;
         }
-    }
 
-    &__matches {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 20px;
-
-        .match {
-            width: 45%;
-            min-width: 380px;
-            background-color: #363636;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid $color-border;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            @include box-shadow(
-                rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-                rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-                rgba(0, 0, 0, 0.06) 0px 2px 1px,
-                rgba(0, 0, 0, 0.09) 0px 4px 2px,
-                rgba(0, 0, 0, 0.09) 0px 8px 4px,
-                rgba(0, 0, 0, 0.09) 0px 16px 8px,
-                rgba(0, 0, 0, 0.09) 0px 32px 16px,
-                rgb(43, 43, 43) 0px 20px 30px -10px
-            );
-
-            .team {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 50%;
-                height: 51px;
-
-                img {
-                    display: block;
-                    width: 30px;
-                    height: 30px;
-                    margin: 0 8%;
-                }
-
-                .item {
-                    margin: 0 5%;
-                }
-            }
+        .item {
+          margin: 0 5%;
         }
+      }
     }
+  }
 }
